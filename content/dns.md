@@ -177,3 +177,29 @@ To ease migration from Consul DNS entries, DNS release provides [aliases feature
 1. define native DNS aliases that match existing Consul DNS entries
 1. redeploy all deployments that use Consul
 1. redeploy all deployments without `consul_agent` job
+
+---
+## Constructing DNS Queries {: #constructing-queries }
+
+BOSH DNS provides its own structured query language for querying instances?
+based on an instance's endemic and organizational relationship; e.g., by an
+instance's healthiness, its availability zone, or group id.
+
+An example of a DNS query is as follows:
+
+dig @bosh-dns q-*
+
+* = s* = s = healthiness
+    g* = g = group (internal)
+    n* = netwo
+
+---
+## Consuming BOSH DNS in Job Templates {: #consuming-dns-job-templates }
+
+<%= link('db').address(
+  healthiness: 'healthy',
+  network: 'asdf',
+  /asdfas
+    )
+
+
