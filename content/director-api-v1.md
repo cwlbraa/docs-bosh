@@ -135,7 +135,7 @@ $ curl -s -k https://192.168.50.4:25555/configs?latest=true | jq .
 
 #### Request headers
 
-- **Content-Type** must be `text/json`.
+- **Content-Type** must be `application/json`.
 
 #### Request body
 
